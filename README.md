@@ -7,6 +7,8 @@ if the **body match** with a given string or a regex expression.
 
 If the check fails posts a message in a [Slack](https://slack.com) channel.
 
+![Message posted to a Slack channel with wt-check](https://mrdev-public.s3.amazonaws.com/wt-check/wt-check_slack_msg.png)
+
 
 Run
 ---
@@ -33,8 +35,9 @@ Install on Webtask platform as a cron service running every 2 minutes with:
 * `--secret TIMEOUT`: (optional) Milliseconds to wait the response
   before aborting the request, default 10000 (10 seconds).
 * `--secret BODY`: (optional) A text expected in the body.
-* `--secret REGEX`: (optional), regex expression expected to match.
-* `--secret SLACK_TOKEN`: the Slack API token, go to https://api.slack.com/docs/oauth-test-tokens
+* `--secret REGEX`: (optional), regex expression expected to match with
+  the body.
+* `--secret SLACK_TOKEN`: the Slack API token, go to https://api.slack.com/web#authentication
   to get a token.
 * `--secret SLACK_CHANNEL`: the channel where to post the alerts.
 * `"*/2 * * * *"`: _cron_ configuration (eg. run every 2 min).
@@ -53,6 +56,6 @@ About
 
 **Source code**: https://github.com/mrsarm/wt-check
 
-**Author**: Mariano Ruiz <mrsarm@gmail.com>
+**Author**: Mariano Ruiz (mrsarm@gmail.com)
 
 2016  |  Apache-2.0
